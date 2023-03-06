@@ -65,13 +65,13 @@ public class Movie {
 
     @ManyToMany
     @JoinTable(name = "inter_act_peli",
-            joinColumns = @JoinColumn(name = "fk_id_peli"),
+            joinColumns = @JoinColumn(name = "fk_id_movie"),
             inverseJoinColumns = @JoinColumn(name = "fk_id_actor"))
     private List<Actores> actores;
 
     @ManyToMany
     @JoinTable(name = "inter_genero_peli",
-            joinColumns = @JoinColumn(name = "fk_id_peli"),
+            joinColumns = @JoinColumn(name = "fk_id_pelicula"),
             inverseJoinColumns = @JoinColumn(name = "fk_id_genero"))
     private List<Genero> generos;
 

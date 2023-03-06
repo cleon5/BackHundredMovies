@@ -115,32 +115,38 @@ public class HundredServiceImpl implements HundredService<Object> {
 
     //Director
     @Override
+    @Transactional
     public List<Object> directorAll() {
         return hundredDirectorDAO.getAll();
     }
 
     @Override
+    @Transactional
     public Object directorId(int id) {
         return hundredDirectorDAO.getByID(id);
     }
 
     @Override
+    @Transactional
     public void saveDirector(Object dir) {
         hundredDirectorDAO.save(dir);
     }
 
     @Override
+    @Transactional
     public void deleteDirector(int id) {
         hundredDirectorDAO.delete(id);
     }
 
     //Disponible
     @Override
+    @Transactional
     public List<Object> disponibleAll() {
         return hundredDisponibleDAO.getAll();
     }
 
     @Override
+    @Transactional
     public Object disponibleId(int id) {
         return hundredDisponibleDAO.getByID(id);
     }
@@ -151,47 +157,56 @@ public class HundredServiceImpl implements HundredService<Object> {
     }
 
     @Override
+    @Transactional
     public void deleteDisponible(int id) {
         hundredDisponibleDAO.delete(id);
     }
 
     //Preguntas
     @Override
+    @Transactional
     public List<Object> preguntaAll() {
         return hundredPreguntaDAO.getAll();
     }
 
     @Override
+    @Transactional
     public Object preguntaId(int id) {
         return hundredPreguntaDAO.getByID(id);
     }
 
     @Override
+    @Transactional
     public void savePregunta(Object pregunta) {
         hundredPreguntaDAO.save(pregunta);
     }
 
     @Override
+    @Transactional
     public void deletePregunta(int id) {
         hundredPreguntaDAO.delete(id);
     }
 
     @Override
+    @Transactional
     public List<Object> generoAll() {
         return hundredGeneroDAO.getAll();
     }
 
     @Override
+    @Transactional
     public Object generoId(int id) {
         return hundredGeneroDAO.getByID(id);
     }
 
     @Override
+    @Transactional
     public void saveGenero(Object genero) {
         hundredGeneroDAO.save(genero);
     }
 
     @Override
+    @Transactional
     public void deleteGenero(int id) {
         hundredGeneroDAO.delete(id);
     }

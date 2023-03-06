@@ -34,7 +34,7 @@ public class Actores {
     @ManyToMany
     @JoinTable(name = "inter_act_peli",
             joinColumns = @JoinColumn(name = "fk_id_actor"),
-            inverseJoinColumns = @JoinColumn(name = "fk_id_peli"))
+            inverseJoinColumns = @JoinColumn(name = "fk_id_movie"))
     @JsonIgnore
     private List<Movie> movies;
 

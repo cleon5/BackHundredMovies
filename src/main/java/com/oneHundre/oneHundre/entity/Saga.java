@@ -12,15 +12,15 @@ import java.util.*;
 @Table(name="saga")
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "saga_nombre")
+        property = "saga_name")
 public class Saga {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
 
-    @Column(name="saga_nombre")
-    private String saga_nombre;
+    @Column(name="saga_name")
+    private String saga_name;
 
    @OneToMany(mappedBy = "saga",cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
    @JsonBackReference

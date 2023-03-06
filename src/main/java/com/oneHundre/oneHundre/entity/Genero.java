@@ -22,7 +22,7 @@ public class Genero {
     @ManyToMany
     @JoinTable(name = "inter_genero_peli",
             joinColumns = @JoinColumn(name = "fk_id_genero"),
-            inverseJoinColumns = @JoinColumn(name = "fk_id_peli"))
+            inverseJoinColumns = @JoinColumn(name = "fk_id_pelicula"))
     @JsonIgnore
     private List<Movie> movies;
 }
