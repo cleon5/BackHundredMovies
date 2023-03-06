@@ -8,31 +8,21 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name="actor")
-public class Actor {
+@Table(name="genero")
+public class Genero {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
 
-    @Column(name="actor_name")
-    private String actor_name;
-
-    @Column(name="date")
-    private String date;
-
-    @Column(name="country")
-    private String country;
-
-    @Column(name="photo")
-    private String photo;
+    @Column(name="genero")
+    private String genero;
 
     //Conexion muchos a muchos con peliculas
     @ManyToMany
-    @JoinTable(name = "inter_act_peli",
-            joinColumns = @JoinColumn(name = "fk_id_actor"),
+    @JoinTable(name = "inter_genero_peli",
+            joinColumns = @JoinColumn(name = "fk_id_genero"),
             inverseJoinColumns = @JoinColumn(name = "fk_id_peli"))
-    //@JsonIgnore
+    @JsonIgnore
     private List<Movie> movies;
-
 }

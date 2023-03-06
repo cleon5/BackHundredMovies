@@ -9,7 +9,7 @@ import java.util.*;
 
 @Data
 @Entity
-@Table(name="saga2")//, uniqueConstraints = {@UniqueConstraint(columnNames = {"id"})})
+@Table(name="saga")
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "saga_nombre")
@@ -26,10 +26,4 @@ public class Saga {
    @JsonBackReference
     private List<Movie> peliculas;
 
-/*
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JoinColumn(name = "id")
-    @ManyToOne
-    @JoinColumn(name = "id_saga")
-    private Movie movie;*/
 }
