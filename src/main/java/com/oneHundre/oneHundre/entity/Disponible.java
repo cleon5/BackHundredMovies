@@ -22,6 +22,16 @@ public class Disponible {
 
     @Column(name="hbomax")
     private String hbomax;
+
+    @Column(name="appletv")
+    private String appletv;
+
+    @Column(name="amazon")
+    private String amazon;
+
+    @Column(name="otro")
+    private String otro;
+
     @JsonBackReference
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id")

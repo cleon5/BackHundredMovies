@@ -144,14 +144,41 @@ public class Controller {
         return "Saga Delete, id - " + Id;
     }
 
+    //Rutas director
+    @GetMapping("/director")
+    public List directorAll(){
+        return hundredService.directorAll();
+    }
+    @GetMapping("/director/{id}")
+    public Genero DirectorId(@PathVariable int id){
+        return (Director) hundredService.directorId(id);
+    }
+    @PostMapping("/director")
+    public Genero saveDirector(@RequestBody Director director){
+        director.setId(0);
+        hundredService.saveDirector(director);
+        return director;
+    }
+    @PutMapping("/director")
+    public Genero updateGenero(@RequestBody Director director){
+        hundredService.saveDirector(director);
+        return director;
+    }
+    @DeleteMapping("/director/{Id}")
+    public String deleteDiretor(@PathVariable int Id) {
+        hundredService.deleteDirector(Id);
+        return "director Delete, id - " + Id;
+    }
+
+
     //Rutas Genero
     @GetMapping("/genero")
     public List generoAll(){
-        return hundredService.actoresAll();
+        return hundredService.generoAll();
     }
     @GetMapping("/genero/{id}")
     public Genero generoId(@PathVariable int id){
-        return (Genero) hundredService.actorId(id);
+        return (Genero) hundredService.generoId(id);
     }
     @PostMapping("/genero")
     public Genero saveGenero(@RequestBody Genero genero){

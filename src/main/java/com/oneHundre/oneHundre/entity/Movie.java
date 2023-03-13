@@ -18,12 +18,6 @@ public class Movie {
     @Column(name="name")
     private String name;
 
-    @Column(name="link")
-    private String link;
-
-    @Column(name="trailer")
-    private String trailer;
-
     @Column(name="poster")
     private String poster;
 

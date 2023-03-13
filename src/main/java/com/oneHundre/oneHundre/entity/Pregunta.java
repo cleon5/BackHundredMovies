@@ -25,7 +25,7 @@ public class Pregunta {
     private String respuestaB;
 
     @Column(name="respuestaC")
-    private String respuestaV;
+    private String respuestaC;
 
     @JsonIgnore
     @OneToOne(cascade = CascadeType.ALL)
