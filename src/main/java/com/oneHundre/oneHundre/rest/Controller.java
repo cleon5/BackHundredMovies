@@ -150,17 +150,12 @@ public class Controller {
         return hundredService.directorAll();
     }
     @GetMapping("/director/{id}")
-    public Genero DirectorId(@PathVariable int id){
+    public Director DirectorId(@PathVariable int id){
         return (Director) hundredService.directorId(id);
     }
-    @PostMapping("/director")
-    public Genero saveDirector(@RequestBody Director director){
-        director.setId(0);
-        hundredService.saveDirector(director);
-        return director;
-    }
+
     @PutMapping("/director")
-    public Genero updateGenero(@RequestBody Director director){
+    public Director updateDirector(@RequestBody Director director){
         hundredService.saveDirector(director);
         return director;
     }
